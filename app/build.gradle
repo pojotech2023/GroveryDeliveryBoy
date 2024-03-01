@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 33
+    defaultConfig {
+        applicationId "wrteam.ecart.rider"
+        minSdkVersion 27
+        targetSdkVersion 33
+        versionCode 7
+        versionName "5.0.3"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'proguard-rules-new.pro'
+        }
+    }
+    namespace 'wrteam.ecart.rider'
+}
+
+dependencies {
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation('io.jsonwebtoken:jjwt:0.9.1')
+
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:32.0.0')
+
+    // Declare the dependencies for the Firebase Cloud Messaging and Analytics libraries
+    implementation 'com.google.firebase:firebase-crashlytics:18.3.7'
+    implementation 'com.google.firebase:firebase-messaging:23.1.2'
+    implementation 'com.google.firebase:firebase-auth:22.0.0'
+    implementation 'com.google.firebase:firebase-core:21.1.1'
+
+    //picasso image loader library
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //Dimension library for every device UI Balance
+    implementation 'com.intuit.ssp:ssp-android:1.1.0'
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+
+    // Declare the dependency for the country code picker
+    implementation 'com.hbb20:ccp:2.7.2'
+
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+}
+
