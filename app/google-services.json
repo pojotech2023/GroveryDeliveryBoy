@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "26980361184",
+    "project_id": "groger-android",
+    "storage_bucket": "groger-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26980361184:android:01dee356fcf9a35238c185",
+        "android_client_info": {
+          "package_name": "com.groger.customer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUHqRV2vRVrAGEA4p_lJKcmLJ6LVa8rOQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26980361184:android:d9805b35a5d9116638c185",
+        "android_client_info": {
+          "package_name": "com.groger.rider"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUHqRV2vRVrAGEA4p_lJKcmLJ6LVa8rOQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

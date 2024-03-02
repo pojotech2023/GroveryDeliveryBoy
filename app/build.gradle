@@ -7,7 +7,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 33
     defaultConfig {
-        applicationId "wrteam.ecart.rider"
+        applicationId "com.groger.rider"
         minSdkVersion 27
         targetSdkVersion 33
         versionCode 7
@@ -33,7 +33,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'proguard-rules-new.pro'
         }
     }
-    namespace 'wrteam.ecart.rider'
+    namespace 'com.groger.rider'
 }
 
 dependencies {

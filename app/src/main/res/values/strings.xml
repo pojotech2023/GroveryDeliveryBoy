@@ -3,6 +3,8 @@
 
     <string name="app_name">eCart Delivery Boy</string>
 
+    <string name="google_api_key">AIzaSyC4y8j7jRSABW_SPsu-WtD-BdDGga05yYA</string>
+
     <string name="msg_privacy_terms">By Logging in, you agree to our Terms &amp; Conditions and Privacy Policy</string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="terms_conditions">Terms &amp; Conditions</string>

@@ -7,7 +7,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission
         android:name="android.permission.CALL_PHONE"
-        android:required="false" />
+        android:required="false"
+        tools:ignore="PermissionImpliesUnsupportedChromeOsHardware" />
 
     <queries>
         <intent>
@@ -18,7 +19,7 @@
     </queries>
 
     <application
-        android:name="wrteam.ecart.rider.helper.AppController"
+        android:name="com.groger.rider.helper.AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -29,22 +30,22 @@
         tools:replace="android:usesCleartextTraffic,android:allowBackup">
 
         <activity
-            android:name="wrteam.ecart.rider.activity.OrderDetailActivity"
+            android:name="com.groger.rider.activity.OrderDetailActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize" />
 
         <activity
-            android:name="wrteam.ecart.rider.activity.NotificationListActivity"
+            android:name="com.groger.rider.activity.NotificationListActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize" />
 
         <activity
-            android:name="wrteam.ecart.rider.activity.WalletHistoryActivity"
+            android:name="com.groger.rider.activity.WalletHistoryActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize" />
 
         <activity
-            android:name="wrteam.ecart.rider.activity.SplashActivity"
+            android:name="com.groger.rider.activity.SplashActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize"
             android:exported="true">
@@ -56,31 +57,31 @@
         </activity>
 
         <activity
-            android:name="wrteam.ecart.rider.activity.DrawerActivity"
+            android:name="com.groger.rider.activity.DrawerActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize" />
 
         <activity
-            android:name="wrteam.ecart.rider.activity.LoginActivity"
+            android:name="com.groger.rider.activity.LoginActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize" />
 
 
         <activity
-            android:name="wrteam.ecart.rider.activity.ProfileActivity"
+            android:name="com.groger.rider.activity.ProfileActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="wrteam.ecart.rider.activity.WebViewActivity"
+            android:name="com.groger.rider.activity.WebViewActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize" />
 
         <activity
-            android:name="wrteam.ecart.rider.activity.MainActivity"
+            android:name="com.groger.rider.activity.MainActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize" />
 
-        <service android:name="wrteam.ecart.rider.helper.MyFirebaseMessagingService"
+        <service android:name="com.groger.rider.helper.MyFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
