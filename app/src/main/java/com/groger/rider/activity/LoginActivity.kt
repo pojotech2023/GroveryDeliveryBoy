@@ -34,6 +34,7 @@ import com.groger.rider.helper.*
 import java.text.DecimalFormat
 import java.text.NumberFormat
 import java.util.concurrent.TimeUnit
+import com.groger.rider.R
 
 class LoginActivity : AppCompatActivity() {
 
