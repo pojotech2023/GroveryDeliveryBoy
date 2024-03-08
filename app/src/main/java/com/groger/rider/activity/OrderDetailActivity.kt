@@ -20,6 +20,8 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.PhoneAuthOptions
+import com.google.firebase.auth.PhoneAuthProvider
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_order_detail.*
 import org.json.JSONArray
@@ -34,6 +36,7 @@ import com.groger.rider.helper.Session
 import com.groger.rider.model.Items
 import com.groger.rider.model.OrderList
 import java.util.*
+import java.util.concurrent.TimeUnit
 
 class OrderDetailActivity : AppCompatActivity() {
     private lateinit var itemArrayList: ArrayList<Items>
@@ -95,6 +98,8 @@ class OrderDetailActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     private fun getOrderData(activity: Activity) =
         if (AppController.isConnected(activity)) {
+
+            println(session.getData(Constant.ID)+" "+orderID+" "+Constant.GetVal);
             val params: MutableMap<String, String?> = HashMap()
             params[Constant.ID] = session.getData(Constant.ID)
             params[Constant.ORDER_ID] = orderID
@@ -112,6 +117,7 @@ class OrderDetailActivity : AppCompatActivity() {
                                     jsonObject1.getString(Constant.DATE_ADDED)
                                 )
                             otp = jsonObject1.getString(Constant.OTP)
+                            println("ReceivedOTP"+otp)
                             tvName.text =
                                 getString(R.string._name, jsonObject1.getString(Constant.NAME))
                             tvPhone.text = jsonObject1.getString(Constant.MOBILE)
@@ -200,6 +206,8 @@ class OrderDetailActivity : AppCompatActivity() {
             )
         }
 
+
+
     private fun confirmOtp() {
         val alertDialog = AlertDialog.Builder(this@OrderDetailActivity)
         val inflater =
@@ -220,6 +228,7 @@ class OrderDetailActivity : AppCompatActivity() {
                     if (checkedItem == 3) {
                         if (edtOTP.text.toString() == otp) {
                             changeOrderStatus(activity, updatedStatus[0]?.lowercase(Locale.ROOT))
+                            //changeOrderStatus(activity, "delivered")
                             dialog.dismiss()
                         } else {
                             Toast.makeText(

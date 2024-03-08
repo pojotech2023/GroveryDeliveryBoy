@@ -6,7 +6,7 @@ object Constant {
 
     //Admin panel url with it would be necessary to put "/"(slash) at end of the url (https://admin.panel.url/)
     //private var BASE_URL = "admin_panel_url_here"
-    private var BASE_URL = "https://grocery.pojotech.in/delivery-boy/api/"
+    private var BASE_URL = "https://grocery.pojotech.in/"
 
     //set your jwt secret key here...key must same in PHP and Android
     var JWT_KEY = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDk0MzkxNDAsImlzcyI6ImVLYXJ0IiwiZXhwIjoxNzA5NDQwOTQwLCJzdWIiOiJlS2FydCBBdXRoZW50aWNhdGlvbiIsIndlYiI6IjI5MjYwNDE4IiwiY3VzdCI6IjIyMDE1OTExIiwiYWRtaW4iOiIzMDI4ODQ0MiJ9.7SMYGkJSX-8Pmzjn0rMemzXpXoV4NCWn4PcFowmlhHE"
