@@ -10,8 +10,8 @@ android {
         applicationId "com.groger.rider"
         minSdkVersion 27
         targetSdkVersion 33
-        versionCode 7
-        versionName "5.0.3"
+        versionCode 1
+        versionName "1.2.0"
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
